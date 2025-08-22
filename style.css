@@ -1,0 +1,80 @@
+/* Общий фон */
+body {
+  background: #f0f2f5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Контейнер чата */
+.chat {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Заголовок */
+.chat-header {
+  background: #4a76a8;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Сообщения */
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+/* Сообщения собеседника */
+.message.other {
+  background: #e5e5ea;
+  align-self: flex-start;
+}
+
+/* Свои сообщения */
+.message.me {
+  background: #4a76a8;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Поле ввода */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background: #4a76a8;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+}
