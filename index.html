@@ -20,5 +20,23 @@
       <button>Отправить</button>
     </div>
   </div>
+  <script>
+const input = document.querySelector('.chat-input input');
+const button = document.querySelector('.chat-input button');
+const messages = document.querySelector('.chat-messages');
+
+button.addEventListener('click', () => {
+  const text = input.value.trim();
+  if (text === '') return;
+
+  const msg = document.createElement('div');
+  msg.className = 'message me';
+  msg.textContent = text;
+
+  messages.appendChild(msg);
+  input.value = '';
+  messages.scrollTop = messages.scrollHeight; // прокрутка вниз
+});
+</script>
 </body>
 </html>
